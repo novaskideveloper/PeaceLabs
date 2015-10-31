@@ -35,3 +35,4 @@ $ git update-index --assume-unchanged web/.htaccess
 For more information about using PHP on Heroku, see these Dev Center articles:
 
 - [PHP on Heroku](https://devcenter.heroku.com/categories/php)
+Atualizado em 30/10
