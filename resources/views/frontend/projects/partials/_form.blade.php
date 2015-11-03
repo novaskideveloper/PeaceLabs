@@ -19,13 +19,13 @@
 <div class="form-group">
     {!! Form::label('profile', 'Imagem de perfil', array('class' => 'col-sm-2 control-label')) !!}
     <div class="col-sm-10">
-	    {!! Form::text('profile', NULL, array('class' => 'form-control', 'placeholder' => 'Imagem de perfil')) !!}
+	    {!! Form::upload('profile', NULL, array('class' => 'form-control', 'placeholder' => 'Imagem de perfil')) !!}
     </div>
 </div>
 <div class="form-group">
     {!! Form::label('cover', 'Imagem da capa', array('class' => 'col-sm-2 control-label')) !!}
     <div class="col-sm-10">
-	    {!! Form::text('cover', NULL, array('class' => 'form-control', 'placeholder' => 'Imagem da capa')) !!}
+	    {!! Form::upload('cover', NULL, array('class' => 'form-control', 'placeholder' => 'Imagem da capa')) !!}
     </div>
 </div>
 <div class="form-group">
