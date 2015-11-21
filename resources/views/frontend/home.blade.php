@@ -63,7 +63,7 @@
   <div class="container">
 
     <h1>Peacelabs: Code For Brazil</h1>
-      <p class="lead">Plataforma colaborativa dos projetos do Code For Brazil</p>
+      <p class="lead">Plataforma colaborativa dos projetos: Code For Brazil</p>
       <div>&nbsp;</div>
       <a href="{{ route('projects.create') }}" class="btn btn-default btn-lg">Criar um projeto</a>
   </div>

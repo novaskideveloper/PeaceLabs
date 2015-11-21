@@ -138,26 +138,11 @@
 
           <!-- COMMENT -->
           <div class="comments">
-            <h3>Comentários</h3>
-            <ul class="list-unstyled">
-              <li class="comment">
-                <i class="fa fa-comment-o col-sm-2"></i>
-                <div class="col-sm-10">
-                  <p><strong>Nima Kazerooni</strong></p>
-                  <p>Que massa, cara!</p>
-                </div>
-              </li>
-              <li class="comment">
-                <i class="fa fa-comment-o col-sm-2"></i>
-                <div class="col-sm-10">
-                  <p><strong>Rodrigo Alvarenga</strong></p>
-                  <p>Cara, puta que projeto que massa.</p>
-                </div>
-              </li>
-            </ul>
+
+			@include('frontend/includes/comments')
+
           </div>
           <!-- /COMMENT -->
-
 
         </div>
 
