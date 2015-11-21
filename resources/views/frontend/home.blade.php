@@ -6,7 +6,7 @@
 	
 		$body = '<div style="display:table;">'.$_POST['InputMessage'].'</div>';	
 			
-		contato($_POST['InputName'],$_POST['InputEmail'],'PEACELABS',$body,'','paloma');
+		contato($_POST['InputName'],$_POST['InputEmail'],'PEACELABS',$body,'','paloma@peacelabs.co');
 		
 		
 		$body = '<div style="display:table;">Atenciosamente,</div>';		
