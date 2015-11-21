@@ -193,7 +193,7 @@
           <li><i class="icon-google-plus icon-2x"></i></li>
         </ul>
         <hr>
-      Code For Brazil - PeaceLabs ©2015</p>
+      Code For Brazil - Peace Interprises ©<?php echo date('Y'); ?></p>
       </div>
     </div>
   </div>
