@@ -4,9 +4,9 @@
  * Frontend Controllers.
  */
 
-get('/new', 'FrontendController@index')->name('home');
+get('/old', 'FrontendController@home')->name('old');
 get('macros', 'FrontendController@macros');
-get('/', 'FrontendController@home');
+get('/', 'FrontendController@home')->name('home');
 get('/root', 'FrontendController@home');
 
 use App\Models\Project;
@@ -35,4 +35,5 @@ $router->group(['middleware' => 'auth'], function () {
     get('dashboard', 'DashboardController@index')->name('frontend.dashboard');
     get('profile/edit', 'ProfileController@edit')->name('frontend.profile.edit');
     patch('profile/update', 'ProfileController@update')->name('frontend.profile.update');
+    get('projects/create', 'ProjectsController@create')->name('projects.create');
 });
