@@ -144,12 +144,36 @@
             <textarea name="InputMessage" id="InputMessage" class="form-control" rows="5" required></textarea>
             <span class="input-group-addon"><i class="fa fa-check"></i></span></div>
         </div>
-        <div class="form-group">
-          <label for="InputReal">O que faz 4+3?</label>
-          <div class="input-group">
-            <input type="text" class="form-control" name="InputReal" id="InputReal" required>
-            <span class="input-group-addon"><i class="fa fa-check"></i></span></div>
-        </div>
+        <?php
+
+								require_once('recaptchalib.php');
+								
+								// Get a key from https://www.google.com/recaptcha/admin/create
+								$publickey = "6LeDZhETAAAAADkdBRL60a8dP4kvvb6ilvUKWb51";
+								$privatekey = "";
+								
+								# the response from reCAPTCHA
+								$resp = null;
+								# the error code from reCAPTCHA, if any
+								$error = null;
+								
+								# was there a reCAPTCHA response?
+								if ($_POST["recaptcha_response_field"]) {
+										$resp = recaptcha_check_answer ($privatekey,
+																		$_SERVER["REMOTE_ADDR"],
+																		$_POST["recaptcha_challenge_field"],
+																		$_POST["recaptcha_response_field"]);
+								
+										if ($resp->is_valid) {
+												echo "You got it!";
+										} else {
+												# set the error code so that we can display it
+												$error = $resp->error;
+										}
+								}
+								echo recaptcha_get_html($publickey, $error);
+								?>
+                    </div>
         <input type="submit" name="submit" id="submit" value="Submit" class="btn btn-info center">
       </div>
     </form>
